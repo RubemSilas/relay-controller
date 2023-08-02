@@ -27,3 +27,9 @@ void RelayControl::off(void)
     pin_state = !_ref_status;
     digitalWrite(_pin, pin_state);
 }
+
+void RelayControl::toggle(void)
+{
+    pin_state = !pin_state;
+    digitalWrite(_pin, !_ref_status);
+}

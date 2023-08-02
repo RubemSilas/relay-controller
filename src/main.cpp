@@ -10,10 +10,6 @@ void setup(void)
 
 void loop(void)
 {
-  Relay_1.on();
-  Relay_2.off();
-  delay(741);
-  Relay_1.off();
-  Relay_2.on();
+  Relay_1.toggle();
   delay(741);
 }
