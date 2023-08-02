@@ -16,6 +16,8 @@ public:
   RelayControl(const uint16_t pin, const bool ref_status);
 
   void relay_control(const bool pin_state);
+  void on(void);
+  void off(void);
 
 private:
   const uint16_t _pin;
