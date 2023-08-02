@@ -12,4 +12,7 @@ void loop(void)
 {
   Relay_1.toggle();
   delay(741);
+  Relay_1.pulse_timer(2 * 1000);
+  Relay_2.pulse_timer(Relay_1.getTime());
+  delay(500);
 }

@@ -19,6 +19,10 @@ public:
   void on(void);
   void off(void);
   void toggle(void);
+  void pulse_timer(uint16_t pulse_timer_interval = 500);
+
+  void setTime(unsigned msTime);
+  uint16_t getTime(void) const;
 
 private:
   const uint16_t _pin;

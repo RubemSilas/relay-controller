@@ -33,3 +33,22 @@ void RelayControl::toggle(void)
     pin_state = !pin_state;
     digitalWrite(_pin, !_ref_status);
 }
+
+void RelayControl::pulse_timer(uint16_t pulse_timer_interval)
+{
+    _msTime = pulse_timer_interval;
+
+    on();
+    delay(_msTime);
+    off();
+}
+
+void RelayControl::setTime(unsigned msTime)
+{
+    _msTime = msTime;
+}
+
+uint16_t RelayControl::getTime(void) const
+{
+    return _msTime;
+}
